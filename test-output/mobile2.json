@@ -1,0 +1,26 @@
+{
+  "capabilities":
+      [
+        {
+         "deviceName": "48ec5ac87d43",
+          "browserName": "chrome",
+          "version":"6.0",
+          "maxInstances": 2,
+          "platform":"Android"
+        }
+      ],
+  "configuration":
+  {
+    "cleanUpCycle":3000,
+    "timeout":30000,
+    "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",	
+    "url":"http://192.168.43.17:4621/wd/hub",
+    "host": "192.168.43.17",
+    "port": 4625,
+    "maxSession": 2,
+    "register": true,
+    "registerCycle": 5000,
+    "hubPort": 4444,
+    "hubHost": "192.168.43.17"
+  }
+}
