@@ -2,30 +2,33 @@ package whatsup;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 
-public class WhatsUpTest {
+public class WhatsUpTesting {
 
 	AndroidDriver<MobileElement> d;
 
 	@BeforeTest
-	public void initilize() throws MalformedURLException {
+	@Parameters({ "UDID", "PORT" })
+	public void initilize(String uid, String port) throws MalformedURLException {
 
+		System.out.println(uid);
+		System.out.println(port);
 		DesiredCapabilities caps = new DesiredCapabilities();
 
 		caps.setCapability("deviceName", "Note3");
 		caps.setCapability("udid", "48ec5ac87d43"); // Give Device ID of your mobile phone
-															// 4cf42f27cf40192.168.43.190:5555
+													// 4cf42f27cf40192.168.43.190:5555
 		caps.setCapability("platformName", "Android");
 		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
 		caps.setCapability("platformVersion", "5.1.0");
