@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+	<test thread-count="5" name="mobile1" parallel="methods">
+		<parameter name="UID" value="48ec5ac87d43" />
+		<parameter name="PORT" value="4723" />
+		<classes>
+			<class name="GcsApp.GcsLogin" />
+		</classes>
+	</test>
+
+	<test name="mobile2">
+		<parameter name="UID" value="a13f32d2" />
+		<parameter name="PORT" value="4727" />
+		<classes>
+			<class name="GcsApp.GcsLogin" />
+		</classes>
+	</test>
+</suite> <!-- Suite -->

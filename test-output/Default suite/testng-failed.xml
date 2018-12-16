@@ -3,13 +3,12 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="whatsup.WhatsUpTesting">
+      <class name="GcsApp.GcsLogin">
         <methods>
-          <include name="initilize"/>
-          <include name="test"/>
           <include name="navigate"/>
+          <include name="initilize"/>
         </methods>
-      </class> <!-- whatsup.WhatsUpTesting -->
+      </class> <!-- GcsApp.GcsLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

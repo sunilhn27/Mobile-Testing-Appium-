@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test name="Test(failed)">
+  <test name="mobile1(failed)" parallel="methods">
     <parameter name="UID" value="48ec5ac87d43"/>
-    <parameter name="PORT" value="4725"/>
+    <parameter name="PORT" value="4723"/>
     <classes>
-      <class name="Test.optional">
+      <class name="GcsApp.GcsLogin">
         <methods>
-          <include name="navigate"/>
+          <include name="initilize" invocation-numbers="0"/>
         </methods>
-      </class> <!-- Test.optional -->
+      </class> <!-- GcsApp.GcsLogin -->
     </classes>
-  </test> <!-- Test(failed) -->
-  <test name="Test1(failed)">
+  </test> <!-- mobile1(failed) -->
+  <test name="mobile2(failed)">
     <parameter name="UID" value="a13f32d2"/>
-    <parameter name="PORT" value="4622"/>
+    <parameter name="PORT" value="4727"/>
     <classes>
-      <class name="Test.optional">
+      <class name="GcsApp.GcsLogin">
         <methods>
-          <include name="navigate"/>
-          <include name="parameter1" invocation-numbers="0"/>
+          <include name="initilize" invocation-numbers="0"/>
         </methods>
-      </class> <!-- Test.optional -->
+      </class> <!-- GcsApp.GcsLogin -->
     </classes>
-  </test> <!-- Test1(failed) -->
+  </test> <!-- mobile2(failed) -->
 </suite> <!-- Failed suite [Suite] -->
